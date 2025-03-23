@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <title>Rum's Image Gallery</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero">
+            <h1>My Image Gallery</h1>
+            <h4>Categories</h4>
+            <div class="btns">
+                <a href="nature.html"> <button class="cat">Nature</button></a>
+                <a href="food.html"> <button class="cat">Food</button></a>
+                <a href="destinations.html"><button class="cat">Destinations</button></a>
+                <a href="cars.html"><button class="cat">Cars</button></a>
+                <a href="homedecor.html"><button class="cat">Home Decor</button></a>
+                <a href="fashion.html"><button class="cat">Fashion</button></a>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="gallery">
+        <div class="wrapper">
+            <div class="box">
+                <img src="n1.jpg" onclick="openModal(0)">
+                <img src="n2.jpg" onclick="openModal(1)">
+                <img src="n3.jpg" onclick="openModal(2)">
+                <img src="n4.jpg" onclick="openModal(3)">
+                <img src="n5.jpg" onclick="openModal(4)">
+                <img src="n6.jpg" onclick="openModal(5)">
+                <img src="n7.jpg" onclick="openModal(6)">
+                <img src="n8.jpg" onclick="openModal(7)">
+                <img src="n9.jpg" onclick="openModal(8)">
+                <img src="n10.jpg" onclick="openModal(9)">
+            </div>
+        </div>
+        <button id="nextbtn">&#10095;</button>
+    </div>
+
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modalcontent" id="modalimg" src="n1.jpg">
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+
+
+    <footer>
+        <p>Copyright &copy Rumaisa Rizwan</p>
+    </footer>
+</body>
+
+</html>
+
+
+<script>
+
+const gallery = document.querySelector('.box');
+const nextBtn = document.getElementById('nextbtn');
+let scrollAmount = 0;
+
+nextBtn.addEventListener('click', () => {
+    scrollAmount += 600; 
+    if (scrollAmount >= gallery.scrollWidth - 500) {
+        scrollAmount = 0;
+    }
+    gallery.style.transform = `translateX(-${scrollAmount}px)`;
+});
+
+let currentIndex = 0;
+const images = document.querySelectorAll('.box img');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalimg');
+
+function openModal(index) {
+    currentIndex = index;
+    modal.style.display = 'flex';
+    modalImg.src = images[currentIndex].src;
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+    modalImg.src = images[currentIndex].src;
+}
+
+
+
+</script>

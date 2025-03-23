@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.hero {
+    background-image: url('hero4.jpg');
+    background-repeat: no-repeat;
+    height: 260px;
+    text-align: center;
+    object-fit: cover;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Dancing Script", cursive;
+    padding: 35px;
+    margin-bottom: -20px;
+    font-size: 60px;
+    font-weight: bolder;
+    text-shadow: 10px;
+    
+  
+}
+
+h4{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.btns{
+    margin: 10px;
+}
+
+.cat{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    background: none;
+    padding: 8px;
+    border: 1.5px solid white;
+    border-radius: 18px;
+    width: 8%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
+.cat:hover{
+    background-color: rgba(184, 202, 220, 0.5);
+    transition-delay: 0.15s;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 7px;
+    margin-bottom: 12px;
+}
+
+#pic{
+    width: 530px;
+    height: 250px;
+    margin: 30px;
+    margin-top: 40px;
+}
+
+
+.textbox{
+    padding: 20px;
+    padding-top: 120px;
+    width: 500px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.textbox p{
+    font-size: 20px;
+}
+
+footer{
+    background-color: rgb(26, 27, 27);
+    height: 100px;
+    color: white;
+    text-align: center;
+    
+}
+
+footer p{
+    padding-top: 30px;
+}
+
+
+/* images  */
+
+.gallery{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.wrapper{
+    width: 100%px;
+    overflow: hidden;
+}
+
+
+.box{
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-left: 15px;
+}
+
+.box img{
+    width: 240px;
+    height: 240px;
+    margin: 8px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+
+#nextbtn{
+    background-color: rgb(190, 179, 179);
+    color: black;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    
+    
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.modalcontent{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal img{
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    margin: auto;
+}
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+    .prev, .next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 20px;
+    
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+@media (max-width: 768px) { 
+    .btns{
+        padding: 2px;
+    }
+
+    .hero{
+        height: 190px;
+        background-image: url('hero5.jpg');
+    }
+
+    h1{
+        font-size: 50px;
+        margin: 2px;
+        margin-top: -2px;
+        padding: 2px;
+        padding-top: 10px;
+    }
+
+    h4{
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cat{
+        font-size: 10px;
+        width: 20%;
+        margin: 2px auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 40px;
+    }
+  }
