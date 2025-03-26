@@ -228,6 +228,36 @@ footer p{
         width: 20%;
         margin: 2px auto;
     }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textbox p{
+        text-align: center;
+    }
+
+    .box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 10px;
+}
+#nextbtn{
+    display: none;
+}
+
+.box img{
+    width: 160px;
+    height: 160px;
+    margin: 3px;
+}
+
+.wrapper{
+    margin-top: 25px;
+    height: 550px;
+}
 }
 
 
@@ -235,4 +265,27 @@ footer p{
     h1{
         font-size: 40px;
     }
+
+    .textbox{
+        width: 75%;
+    }
+
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .wrapper{
+       height: 1070px;
+       display: flex;
+       justify-content: center;
+       width: 100%;
+      }
+
+      .box img{
+        height: 190px;
+        width: 190px;
+        margin: 3px auto;
+      }
+    
   }
