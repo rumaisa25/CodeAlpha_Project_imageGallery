@@ -280,6 +280,7 @@ footer p{
     .box {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        margin-right: 2px;
       }
 
       .wrapper{
@@ -290,8 +291,8 @@ footer p{
       }
 
       .box img{
-        height: 190px;
-        width: 190px;
+        height: 180px;
+        width: 180px;
         margin: 3px auto;
       }
     
