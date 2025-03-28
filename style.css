@@ -282,7 +282,8 @@ footer p{
     .box {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        margin-right: 2px;
+        margin-right: 0;
+        margin-left: 2px;
       }
 
       .wrapper{
