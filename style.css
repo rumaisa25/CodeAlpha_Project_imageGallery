@@ -295,5 +295,10 @@ footer p{
         width: 180px;
         margin: 3px auto;
       }
+
+    #pic{
+        width: 60%;
+    }
+    
     
   }
